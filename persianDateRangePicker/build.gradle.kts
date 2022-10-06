@@ -1,19 +1,26 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("org.jetbrains.dokka")
+    `maven-publish`
 }
 
 android {
     namespace = "com.alirezamilani.persiandaterangepicker"
-    compileSdk = 32
+    compileSdk = ConfigData.compileSdk
+
+    defaultConfig {
+        minSdk = ConfigData.minSdk
+        targetSdk = ConfigData.targetSdk
+
+        aarMetadata {
+            minCompileSdk = ConfigData.minSdk
+        }
+    }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
         }
     }
 
@@ -31,22 +38,77 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = Versions.COMPOSE_COMPILER
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
 }
 
 dependencies {
+    implementation(Dependencies.ANDROIDX_COMPOSE_MATERIAL)
+    implementation(Dependencies.ANDROIDX_COMPOSE_MATERIAL3)
+    implementation(Dependencies.ANDROIDX_COMPOSE_UI_PREVIEW)
 
-//    implementation 'androidx.core:core-ktx:1.7.0'
-//    implementation 'androidx.appcompat:appcompat:1.4.1'
-//    implementation 'com.google.android.material:material:1.5.0'
+    debugImplementation(Dependencies.ANDROIDX_COMPOSE_UI_TOOLING)
 
-    implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.compose.material3:material3:1.0.0-alpha15")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.2.1")
+    testImplementation(Dependencies.JUNIT)
+}
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+tasks {
+    dokkaHtml.configure {
+        dokkaSourceSets {
+            named("main") {
+                noAndroidSdkLink.set(false)
+            }
+        }
+    }
+
+    register<Jar>("dokkaJar") {
+        group = JavaBasePlugin.DOCUMENTATION_GROUP
+        description = "Assembles Kotlin docs with Dokka"
+        archiveClassifier.set("javadoc")
+        from(dokkaHtml)
+    }
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.alirezamilani"
+            artifactId = "core"
+            version = ConfigData.versionName
+
+            afterEvaluate {
+                from(components["release"])
+
+                artifact(tasks["dokkaJar"])
+            }
+
+            pom {
+                name.set("NinjaAppDev Core")
+                description.set("This library consist of core classes for NinjaAppDev`s project")
+                url.set("https://www.ninjaappdev.com/directory/")
+                inceptionYear.set("2018")
+
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+
+                developers {
+                    developer {
+                        id.set("alireza_milani")
+                        name.set("Alireza Milani")
+                        email.set("alireza.milani2011@gmail.com")
+                    }
+                }
+            }
+        }
+    }
 }

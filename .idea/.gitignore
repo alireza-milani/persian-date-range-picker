@@ -1,3 +1,14 @@
 # Default ignored files
+/caches
+/libraries
 /shelf/
+/assetWizardSettings.xml
+/compiler.xml
+/deploymentTargetDropDown.xml
+/gradle.xml
+/kotlinScripting.xml
+/misc.xml
+/modules.xml
+/navEditor.xml
+/vcs.xml
 /workspace.xml

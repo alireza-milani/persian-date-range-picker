@@ -1,5 +1,6 @@
 plugins {
-    id("com.android.application") version "7.3.0" apply false
-    id("com.android.library") version "7.3.0" apply false
-    kotlin("android") version "1.7.10" apply false
+    id("com.android.application") version Versions.ANDROID_GRADLE_PLUGIN apply false
+    id("com.android.library") version Versions.ANDROID_GRADLE_PLUGIN apply false
+    kotlin("android") version Versions.KOTLIN apply false
+    id("org.jetbrains.dokka") version Versions.DOKKA apply false
 }
