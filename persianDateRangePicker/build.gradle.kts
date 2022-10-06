@@ -79,7 +79,7 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.alirezamilani"
-            artifactId = "core"
+            artifactId = "persianDateRangePicker"
             version = ConfigData.versionName
 
             afterEvaluate {
@@ -89,10 +89,9 @@ publishing {
             }
 
             pom {
-                name.set("NinjaAppDev Core")
-                description.set("This library consist of core classes for NinjaAppDev`s project")
-                url.set("https://www.ninjaappdev.com/directory/")
-                inceptionYear.set("2018")
+                name.set("Persian Date Range Picker")
+                description.set("This library consist of classes for create data range picker in compose project")
+                inceptionYear.set("2022")
 
                 licenses {
                     license {
