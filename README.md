@@ -1,4 +1,4 @@
-# Persian Date RangePicker
+# Persian Date Range Picker
 
 Date pickers let users select range of dates, written in **Jetpack compose**
 <br>
@@ -39,7 +39,7 @@ implementation("com.github.alireza-milani:persian-date-range-picker:0.0.1")
 ### For a date picker with no customization
 ```kotlin
 DateRangePicker(
-  modifier: Modifier = Modifier,
+  modifier = Modifier,
   onCloseClick = { 
     // Do something when close button is selected
   },
