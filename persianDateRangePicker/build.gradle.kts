@@ -78,7 +78,7 @@ tasks {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.alirezamilani"
+            groupId = "io.github.alireza-milani"
             artifactId = "persianDateRangePicker"
             version = ConfigData.versionName
 
