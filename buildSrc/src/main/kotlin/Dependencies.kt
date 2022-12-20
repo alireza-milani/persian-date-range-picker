@@ -21,12 +21,12 @@
 object Dependencies {
 
     const val ANDROIDX_ACTIVITY_COMPOSE = "androidx.activity:activity-compose:${Versions.ACTIVITY}"
-    const val ANDROIDX_COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.COMPOSE}"
-    const val ANDROIDX_COMPOSE_MATERIAL3 = "androidx.compose.material3:material3:1.0.0-alpha15"
-    const val ANDROIDX_COMPOSE_UI = "androidx.compose.ui:ui:${Versions.COMPOSE}"
-    const val ANDROIDX_COMPOSE_UI_PREVIEW =
-        "androidx.compose.ui:ui-tooling-preview:${Versions.COMPOSE}"
-    const val ANDROIDX_COMPOSE_UI_TOOLING = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
+    const val ANDROIDX_COMPOSE_BOM = "androidx.compose:compose-bom:2022.12.00"
+    const val ANDROIDX_COMPOSE_MATERIAL = "androidx.compose.material:material"
+    const val ANDROIDX_COMPOSE_MATERIAL3 = "androidx.compose.material3:material3"
+    const val ANDROIDX_COMPOSE_UI = "androidx.compose.ui:ui"
+    const val ANDROIDX_COMPOSE_UI_PREVIEW = "androidx.compose.ui:ui-tooling-preview"
+    const val ANDROIDX_COMPOSE_UI_TOOLING = "androidx.compose.ui:ui-tooling"
     const val JETBRAINS_ANNOTATIONS = "org.jetbrains:annotations:23.0.0"
     const val JUNIT = "junit:junit:4.13.2"
 }

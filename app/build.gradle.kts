@@ -46,6 +46,7 @@ android {
 
 dependencies {
     implementation(project(":persianDateRangePicker"))
+    implementation(platform(Dependencies.ANDROIDX_COMPOSE_BOM))
     implementation(Dependencies.ANDROIDX_ACTIVITY_COMPOSE)
     implementation(Dependencies.ANDROIDX_COMPOSE_MATERIAL3)
     implementation(Dependencies.ANDROIDX_COMPOSE_UI)
