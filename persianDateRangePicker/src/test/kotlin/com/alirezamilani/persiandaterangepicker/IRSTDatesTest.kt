@@ -1,9 +1,10 @@
 package com.alirezamilani.persiandaterangepicker
 
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendar
+import com.alirezaMilani.persianDateRangePicker.IRSTDates
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
 import org.junit.Assert
 import org.junit.Test
-import java.util.Calendar
+import java.util.*
 
 /**
  * @author Alireza Milani

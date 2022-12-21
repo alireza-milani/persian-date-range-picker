@@ -1,8 +1,7 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendar
-import java.util.Calendar
-import java.util.TimeZone
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
+import java.util.*
 
 /**
  * Utility class for common operations on timezones, calendars, date formats, and longs representing

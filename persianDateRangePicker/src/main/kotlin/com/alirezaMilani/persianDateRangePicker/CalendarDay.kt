@@ -1,4 +1,4 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,9 +26,7 @@ import androidx.compose.ui.graphics.drawscope.inset
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.alirezamilani.persiandaterangepicker.DayType.End
-import com.alirezamilani.persiandaterangepicker.DayType.Start
-import com.alirezamilani.persiandaterangepicker.DayType.Today
+import com.alirezaMilani.persianDateRangePicker.DayType.*
 
 /**
  * A layout to show a day

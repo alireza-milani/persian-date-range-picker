@@ -1,4 +1,4 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationDrawerItemColors

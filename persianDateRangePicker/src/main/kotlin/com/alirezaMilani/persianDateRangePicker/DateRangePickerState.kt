@@ -1,18 +1,12 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
 import android.content.res.Resources
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
-import com.alirezamilani.persiandaterangepicker.DayType.Day
-import com.alirezamilani.persiandaterangepicker.DayType.End
-import com.alirezamilani.persiandaterangepicker.DayType.Start
-import com.alirezamilani.persiandaterangepicker.DayType.Today
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendar
-import java.util.Calendar
+import com.alirezaMilani.persianDateRangePicker.DayType.*
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
+import com.alirezamilani.persiandaterangepicker.R
+import java.util.*
 
 /**
  * Responsible for holding state related to [DateRangePicker] and containing UI related logic

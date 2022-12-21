@@ -1,4 +1,4 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable

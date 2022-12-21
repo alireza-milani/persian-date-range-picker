@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.alirezamilani.app.ui.theme.PersianDateRangePickerTheme
-import com.alirezamilani.persiandaterangepicker.DateRangePicker
+import com.alirezaMilani.persianDateRangePicker.DateRangePicker
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

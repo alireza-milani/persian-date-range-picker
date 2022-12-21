@@ -1,4 +1,4 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
 /**
  * @author Alireza Milani

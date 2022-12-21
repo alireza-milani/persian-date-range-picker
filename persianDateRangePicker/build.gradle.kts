@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.alirezamilani.persiandaterangepicker"
+    namespace = "com.alirezaMilani.persianDateRangePicker"
     compileSdk = ConfigData.compileSdk
 
     defaultConfig {
@@ -80,7 +80,7 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "io.github.alireza-milani"
-            artifactId = "persianDateRangePicker"
+            artifactId = "persian-date-range-picker"
             version = ConfigData.versionName
 
             afterEvaluate {
@@ -112,4 +112,3 @@ publishing {
         }
     }
 }
-

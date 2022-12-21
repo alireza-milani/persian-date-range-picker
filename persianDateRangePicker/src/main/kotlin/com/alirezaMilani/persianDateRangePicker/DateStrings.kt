@@ -1,9 +1,9 @@
-package com.alirezamilani.persiandaterangepicker
+package com.alirezaMilani.persianDateRangePicker
 
-import com.alirezamilani.persiandaterangepicker.IRSTDates.Companion
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendar
+import com.alirezaMilani.persianDateRangePicker.IRSTDates.Companion
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
 import java.text.SimpleDateFormat
-import java.util.Date
+import java.util.*
 
 /**
  * Util methods for formatting date strings for use in [DateRangePicker].

@@ -1,12 +1,9 @@
-package com.alirezamilani.persiandaterangepicker.persianCalendar
+package com.alirezaMilani.persianDateRangePicker.persianCalendar
 
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendarConstants.Companion.MILLIS_JULIAN_EPOCH
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendarConstants.Companion.MILLIS_OF_A_DAY
-import com.alirezamilani.persiandaterangepicker.persianCalendar.PersianCalendarUtils.Companion.ceil
-import java.util.Calendar
-import java.util.GregorianCalendar
-import java.util.Locale
-import java.util.TimeZone
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendarConstants.Companion.MILLIS_JULIAN_EPOCH
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendarConstants.Companion.MILLIS_OF_A_DAY
+import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendarUtils.Companion.ceil
+import java.util.*
 import kotlin.math.floor
 
 /**

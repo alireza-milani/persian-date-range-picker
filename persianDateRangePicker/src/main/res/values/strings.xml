@@ -6,5 +6,4 @@
     <string name="picker_range_header_selected">%1$s – %2$s</string>
     <string name="picker_range_header_title">بازه تاریخ را انتخاب کنید</string>
     <string name="picker_range_confirm">ذخیره</string>
-
 </resources>
