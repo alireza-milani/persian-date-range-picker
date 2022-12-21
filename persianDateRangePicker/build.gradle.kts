@@ -3,6 +3,7 @@ plugins {
     kotlin("android")
     id("org.jetbrains.dokka")
     `maven-publish`
+    signing
 }
 
 android {
@@ -107,6 +108,12 @@ publishing {
                         name.set("Alireza Milani")
                         email.set("alireza.milani2011@gmail.com")
                     }
+                }
+
+                scm {
+                    connection.set("cm:git:git://github.com/Alireza-Milani/persian-date-range-picker.git")
+                    developerConnection.set("scm:git:ssh://github.com/Alireza-Milani/persian-date-range-picker.git")
+                    url.set("https://github.com/Alireza-Milani/persian-date-range-picker/tree/master")
                 }
             }
         }
