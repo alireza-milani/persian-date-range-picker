@@ -26,7 +26,6 @@ import androidx.compose.ui.graphics.drawscope.inset
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.alirezaMilani.persianDateRangePicker.DayType.*
 
 /**
  * A layout to show a day
@@ -52,13 +51,13 @@ fun CalendarDay(
             .size(DateRangePickerTokens.DayParentSize)
             .drawBehind {
                 inset(vertical = padding) {
-                    if (dayType == Start) {
+                    if (dayType == DayType.Start) {
                         drawRect(
                             color = colors.rangeDateContainerColor,
                             topLeft = Offset(x = 0f, y = 0f),
                             size = Size(size.width / 2f, size.height)
                         )
-                    } else if (dayType == End) {
+                    } else if (dayType == DayType.End) {
                         drawRect(
                             color = colors.rangeDateContainerColor,
                             topLeft = Offset(x = size.width / 2f, y = 0f)
@@ -75,7 +74,7 @@ fun CalendarDay(
     ) {
         var modifier = Modifier.size(DateRangePickerTokens.DaySize)
 
-        modifier = if (dayType == Today && !selected) {
+        modifier = if (dayType == DayType.Today && !selected) {
             modifier.then(Modifier.border(1.dp, color = Color.Black, CircleShape))
         } else {
             modifier.then(
@@ -104,5 +103,5 @@ fun CalendarDay(
 @Preview
 @Composable
 fun CalendarDayPreview() {
-    CalendarDay(1, true, Today)
+    CalendarDay(1, true, DayType.Today)
 }

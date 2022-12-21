@@ -1,11 +1,13 @@
 package com.alirezaMilani.persianDateRangePicker
 
 import android.content.res.Resources
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
-import com.alirezaMilani.persianDateRangePicker.DayType.*
 import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
-import com.alirezamilani.persiandaterangepicker.R
 import java.util.*
 
 /**
@@ -82,8 +84,7 @@ class DateRangePickerState(
 
     fun isSelectionComplete(): Boolean {
         return selectedStartDate != null && selectedEndDate != null && isValidRange(
-            selectedStartDate!!,
-            selectedEndDate!!
+            selectedStartDate!!, selectedEndDate!!
         )
     }
 
@@ -131,26 +132,27 @@ class DateRangePickerState(
     }
 
     fun getDayType(date: Long): DayType {
-        var dayType: DayType = Day
+        var dayType: DayType = DayType.Day
 
         val currentDate = IRSTDates.canonicalYearMonthDay(date)
 
         if (currentDate == IRSTDates.getTodayCalendar().timeInMillis) {
-            dayType = Today
+            dayType = DayType.Today
         }
 
         if (selectedStartDate != null && selectedEndDate != null) {
-            if (IRSTDates.canonicalYearMonthDay(selectedStartDate!!) !=
-                IRSTDates.canonicalYearMonthDay(selectedEndDate!!)
+            if (IRSTDates.canonicalYearMonthDay(selectedStartDate!!) != IRSTDates.canonicalYearMonthDay(
+                    selectedEndDate!!
+                )
             ) {
                 when (currentDate) {
-                    IRSTDates.canonicalYearMonthDay(selectedStartDate!!) -> dayType = Start
-                    IRSTDates.canonicalYearMonthDay(selectedEndDate!!) -> dayType = End
+                    IRSTDates.canonicalYearMonthDay(selectedStartDate!!) -> dayType = DayType.Start
+                    IRSTDates.canonicalYearMonthDay(selectedEndDate!!) -> dayType = DayType.End
                 }
             }
         } else if (selectedStartDate == null || selectedEndDate == null) {
             if (currentDate != IRSTDates.getTodayCalendar().timeInMillis) {
-                dayType = Day
+                dayType = DayType.Day
             }
         }
 
