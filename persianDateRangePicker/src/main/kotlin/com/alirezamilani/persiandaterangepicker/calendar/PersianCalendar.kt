@@ -1,8 +1,8 @@
-package com.alirezaMilani.persianDateRangePicker.persianCalendar
+package com.alirezamilani.persiandaterangepicker.calendar
 
-import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendarConstants.Companion.MILLIS_JULIAN_EPOCH
-import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendarConstants.Companion.MILLIS_OF_A_DAY
-import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendarUtils.Companion.ceil
+import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendarConstants.Companion.MILLIS_JULIAN_EPOCH
+import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendarConstants.Companion.MILLIS_OF_A_DAY
+import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendarUtils.Companion.ceil
 import java.util.*
 import kotlin.math.floor
 

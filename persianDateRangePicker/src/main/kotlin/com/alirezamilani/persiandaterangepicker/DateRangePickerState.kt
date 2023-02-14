@@ -1,4 +1,4 @@
-package com.alirezaMilani.persianDateRangePicker
+package com.alirezamilani.persiandaterangepicker
 
 import android.content.res.Resources
 import androidx.compose.runtime.Composable
@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
-import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
+import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendar
 import java.util.*
 
 /**

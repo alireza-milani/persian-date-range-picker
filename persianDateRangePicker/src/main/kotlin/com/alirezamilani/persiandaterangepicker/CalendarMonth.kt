@@ -1,4 +1,4 @@
-package com.alirezaMilani.persianDateRangePicker
+package com.alirezamilani.persiandaterangepicker
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -10,7 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
+import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendar
 
 /**
  * A layout to show days of month

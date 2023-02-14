@@ -1,4 +1,4 @@
-package com.alirezaMilani.persianDateRangePicker.persianCalendar
+package com.alirezamilani.persiandaterangepicker.calendar
 
 import kotlin.math.ceil
 import kotlin.math.floor

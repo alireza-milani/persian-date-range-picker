@@ -1,4 +1,4 @@
-package com.alirezaMilani.persianDateRangePicker
+package com.alirezamilani.persiandaterangepicker
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,7 +25,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
-import com.alirezaMilani.persianDateRangePicker.persianCalendar.PersianCalendar
+import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendar
 
 /**
  * A date range picker body layout

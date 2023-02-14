@@ -20,7 +20,7 @@
  */
 object Versions {
 
-    const val ANDROID_GRADLE_PLUGIN = "7.2.2"
+    const val ANDROID_GRADLE_PLUGIN = "7.4.1"
     const val ACTIVITY = "1.5.1"
     const val COMPOSE_COMPILER = "1.3.2"
     const val DOKKA = "1.7.10"

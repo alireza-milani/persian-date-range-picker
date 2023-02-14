@@ -1,13 +1,16 @@
+//import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
     id("com.android.library")
     kotlin("android")
     id("org.jetbrains.dokka")
+    id("com.vanniktech.maven.publish")/* version "0.24.0"*/
     `maven-publish`
     signing
 }
 
 android {
-    namespace = "com.alirezaMilani.persianDateRangePicker"
+    namespace = "com.alirezamilani.persiandaterangepicker"
     compileSdk = ConfigData.compileSdk
 
     defaultConfig {
@@ -42,11 +45,11 @@ android {
         kotlinCompilerExtensionVersion = Versions.COMPOSE_COMPILER
     }
 
-    publishing {
+    /*mavenPublishing {
         singleVariant("release") {
             withSourcesJar()
         }
-    }
+    }*/
 }
 
 dependencies {
@@ -119,3 +122,48 @@ publishing {
         }
     }
 }
+
+//group = "io.github.alireza-milani"
+//version = ConfigData.versionNam
+
+/*
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.S01)
+
+    signAllPublications()
+
+//    afterEvaluate {
+//        from(components["release"])
+//
+//        artifact(tasks["dokkaJar"])
+//    }
+
+    coordinates("io.github.alireza-milani", "persian-date-range-picker", ConfigData.versionName)
+
+    pom {
+        name.set("Persian Date Range Picker")
+        description.set("This library consist of classes for create data range picker in compose project")
+        inceptionYear.set("2023")
+        url.set("https://github.com/Alireza-Milani/persian-date-range-picker/")
+        licenses {
+            license {
+                name.set("The Apache License, Version 2.0")
+                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+            }
+        }
+        developers {
+            developer {
+                id.set("alireza_milani")
+                name.set("Alireza Milani")
+                email.set("alireza.milani2011@gmail.com")
+                url.set("https://github.com/Alireza-Milani/")
+            }
+        }
+        scm {
+            url.set("https://github.com/Alireza-Milani/persian-date-range-picker/")
+            connection.set("scm:git:git://github.com/Alireza-Milani/persian-date-range-picker.git")
+            developerConnection.set("scm:git:ssh://git@github.com:Alireza-Milani/persian-date-range-picker.git")
+        }
+    }
+}*/
