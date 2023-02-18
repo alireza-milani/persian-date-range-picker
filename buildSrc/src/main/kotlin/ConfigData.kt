@@ -6,7 +6,7 @@ object ConfigData {
 
     private const val versionMajor = 0
     private const val versionMinor = 0
-    private const val versionPatch = 1
+    private const val versionPatch = 2
 
     /**
      * Version code is made according below pattern
