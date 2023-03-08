@@ -27,12 +27,7 @@ Common use cases include:
 
 ## Download
 ```kotlin
-repositories {
-  maven("https://jitpack.io")
-}
-```
-```kotlin
-implementation("com.github.alireza-milani:persian-date-range-picker:0.0.1")
+implementation("io.github.alireza-milani:persian-date-range-picker:0.0.4")
 ```
 
 ## Usage
@@ -50,7 +45,7 @@ DateRangePicker(
 ```
 ## License
 
-    Copyright 2022 Alireza Milani
+    Copyright 2023 Alireza Milani
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

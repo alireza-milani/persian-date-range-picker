@@ -23,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import com.alirezamilani.persiandaterangepicker.calendar.PersianCalendar
@@ -89,6 +90,7 @@ fun DateRangePicker(
                                     .fillMaxSize()
                                     .wrapContentSize(Alignment.Center),
                                 text = dayName,
+                                fontWeight = FontWeight.Bold,
                                 style = MaterialTheme.typography.bodyMedium.copy(
                                     color = MaterialTheme.colorScheme.onSurface
                                 )
@@ -120,7 +122,7 @@ fun DateRangePicker(
                             .paddingFromBaseline(top = DateRangePickerTokens.MonthNameBaselinePadding)
                             .padding(horizontal = DateRangePickerTokens.MonthNameHorizontalPadding),
                         text = state.getLongName(calendar),
-                        style = MaterialTheme.typography.titleSmall.copy(
+                        style = MaterialTheme.typography.titleMedium.copy(
                             color = MaterialTheme.colorScheme.onSurface
                         )
                     )
